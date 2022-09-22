@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/tennis_logo2.ico">
+    <link rel="stylesheet" href="css/tennisflex.css">
+    <title>FULL TENIS - Canchas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a name="canchas"></a>
+        <div class="contenedor1 responsive_nav">
+                <img src="img/tennis_logo2.png" alt="logo" class="logo">
+                <div class="hijo1"> <a class="fontlinks" href="index.html#Home">Home</a> </div>
+                <div class="hijo1"> <a class="fontlinks" href="clases.html#clases">Clases</a></div>
+                <div class="hijo1"> <a class="fontlinks"  href="Canchas.html#canchas">Canchas</a> </div>
+                <div class="hijo1"> <a class="fontlinks"  href="eventos.html#eventos">Eventos</a> </div>
+                <img src="img/tennis_logo2.png" alt="logo" class="logo">
+        </div>
+        </nav>
+
+    <div class="contenedor2">
+        <div>
+        <h2 class="palinear">VENITE A JUGAR</h2>
+        <p class="palinear">Completando el formulario podes reservar cancha.</p>
+        </div>
+    </div>
+</header>
+    
+
+
+    <div class="canchas1">
+       <div><img src="img/polvo1.jpg" alt="logo" class="imgcanchas"></div>
+       <div><img src="img/polvo2.jpg" alt="logo" class="imgcanchas"></div>
+        <div><img src="img/rapida1.jpg" alt="logo" class="imgcanchas"></div>
+    </div>
+
+
+<!--https://www.youtube.com/watch?v=FZrHoAUkHpE-->
+<section>
+    <h3>Contactenos</h3>
+    <div style="text-align:center">
+        <fieldset class="fieldsetcanchas">
+            <form action="">
+                <label for="firstname">Nombre:</label>
+                <input class="textinput" type="text" id=firstname placeholder="Ingrese su nombre aquí...">
+                <br><br>
+                <label for="lastname">Apellido:</label>
+                <input class="textinput" type="text" id=lastname placeholder="Ingrese su apellido aquí...">
+                <br><br>
+                <label for="lastname">Email:</label>
+                <input class="textinput" type="email" id=email placeholder="Ingrese su email...">
+                <br><br>
+                <label for="number">Teléfono:</label>
+                <input class="textinput" id= number type="tel" placeholder="Ingrese Su Número de Contacto.">
+                <br><br>
+                <label for="cancha">Tipo de Cancha:</label>
+                <select id="cancha" name="cancha">
+                    <option value="1">Polvo de ladrillo Cancha 1</option>
+                    <option value="2">Polvo de ladrillo Cancha 2</option>
+                    <option value="3">Polvo de ladrillo Cancha 3</option>
+                    <option value="4">Polvo de ladrillo Cancha 4</option>
+                    <option value="5">Rápida Cancha 1</option>
+                    <option value="6">Rápida Cancha 2</option>
+                </select>
+                <br><br>
+                <label for="date">FECHA</label>
+                <input class="textinput" type="date" value="DD/MM/AAAA..." id="date">
+                <br><br>
+                <label for="times">Horario Comienzo:</label>
+                <input class="textinput" type="time" id="times">
+                <br><br>
+                <label for="timef">Horario Fin:</label>
+                <input class="textinput" type="time" id="timef">
+                <br><br>
+                <div class="button">
+               <div> <button class="reset" type="reset">Reset</button></div>
+           
+                <div><input  class="enviar" type="submit" value="Enviar"> </div>
+                </div>
+        
+            </form>
+        </fieldset>
+    </div>
+</section>
+
+
+<footer>
+    <div class="contfoot footercolumnas">
+      <article class="footerblock">
+                <h1>Links</h1>
+                <b><a class="fontlinks" href="index.html#Home">Home</a></b><br>
+                <b><a class="fontlinks" href="clases.html#clases">Clases</a></b><br>
+                <b><a class="fontlinks"  href="Canchas.html#canchas">Canchas</a> </b><br>
+                <b><a class="fontlinks"  href="contact.html#contact">Eventos</a></b>
+      </article>
+  
+    
+      <article class="footerblock">
+        <span><h1>Contacto</h1></span>
+        <i class="fa-regular fa-envelope"></i><span> <b> Email:</b> info@fulltenis.com</span>
+        <br>
+        <i class="fa-solid fa-phone"></i><span> <b> Teléfono:</b> info@fulltenis.com</span>
+        <br>
+        <i class="fa-regular fa-clock"></i><b> Horarios:</b> Todos los dias de 7am a 11pm</span>            
+      </article>
+  
+      <article class="footerblock">
+        <h1>Newsletter</h1>
+            <br>
+                <fieldset class="newsletter">
+                  <input class="textinput" type="text" id=firstname placeholder="Ingrese su nombre completo...">
+                  <br><br>
+                  <input class="textinput" type="email" id=email placeholder="Ingrese su email...">
+                  <br>
+                  <input  class="enviar" type="submit" value="Enviar"> 
+                </fieldset>
+      </article>
+  
+    </div>
+      <div class="iconfooter">
+        <span class="itemfooter"> <a href="#"><i class="fa-brands fa-square-facebook"></i></a></span>
+        <span class="itemfooter"> <a href="#"><i class="fa-brands fa-twitter"></i></a> </span>
+        <span class="itemfooter"><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+      </div>
+  
+  </footer>
+
+</body>
+</html>
