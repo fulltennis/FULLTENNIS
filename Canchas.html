@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/503f86799e.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <link rel="icon" href="img/tennis_logo2.ico">
     <link rel="stylesheet" href="css/tennisflex.css">
     <title>FULL TENIS - Canchas</title>
@@ -50,6 +51,7 @@
             <div class="container">
                 <div class="row">
                     <div style="text-align:center;">
+                        <form name = "myForm" onsubmit="return(validate())">
                                 <fieldset class="fieldsetcanchas">
                                     <div>
                                         <br><br><br><br><br>
@@ -63,7 +65,7 @@
                                     <div>
                                         <label for="lastname">Apellido:</label>
                                         <div>
-                                            <input id="lname" name="name" type="text" placeholder="Ingrese su apellido...">
+                                            <input id="lname" name="lastName" type="text" placeholder="Ingrese su apellido...">
                                         </div>
                                     </div>
                                 
@@ -118,7 +120,7 @@
                                          <div><input  class="enviarreservas" type="submit" value="Enviar"> </div>
                                     </div>
                                 </fieldset>
-                            
+                            </form>
                         
                     </div>
                 </div>
