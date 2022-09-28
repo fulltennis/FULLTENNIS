@@ -103,15 +103,16 @@
 
     
 /*Fieldset pagina reservar de canchas*/
-    .fieldsetcanchas{text-align:left;
-    background-color: lightgrey;
+.fieldsetcanchas{text-align:left;
+    border: white;
     display: inline-block;
-    margin:auto;}
+    margin: auto;}
 
 /*Start Características botón reset enviar*/
-    .reset{background-color: rgb(235, 175, 175);}
-    .enviar{background-color: aquamarine;}
-    .button{display: flex;justify-content: space-between;}
+.reset{background-color: rgb(235, 175, 175);font-size: large;}
+.enviar{background-color: aquamarine;}
+.enviarreservas{background-color: aquamarine;font-size: large; }
+.button{display: flex;justify-content: space-between;margin: 5%;}
 /*End Características botón reset enviar*/
 
 .canchas{
