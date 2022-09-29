@@ -5,6 +5,8 @@
     font-family: 'Crimson Text', serif;
 }
 
+/*body{opacity: .5;}*/
+
 .fontlinks{
     text-decoration: none;
     color: green;
@@ -106,14 +108,79 @@
 .fieldsetcanchas{text-align:left;
     border: white;
     display: inline-block;
-    margin: auto;}
+    margin: auto;
+    font-size: large;}
 
-/*Start Características botón reset enviar*/
-.reset{background-color: rgb(235, 175, 175);font-size: large;}
-.enviar{background-color: aquamarine;}
-.enviarreservas{background-color: aquamarine;font-size: large; }
-.button{display: flex;justify-content: space-between;margin: 5%;}
-/*End Características botón reset enviar*/
+/*Start Características botón  enviar de la parte de eventos y newsletter*/
+
+.enviar{background-color:rgb(134, 244, 134);border-radius:10px;
+    border:0;
+    outline:none;
+    cursor:pointer;
+    font-size: small;
+    font-weight: 10px;
+    padding:5px 20px;
+}
+/*End Características botón  enviar de la parte de eventos y newsletter*/
+
+/*Start botones y popup de la pagina canchas.html*/
+.button{display: flex;justify-content: center;margin: 5%;}
+
+.btn{
+    padding:5px 20px;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    background-color:rgb(134, 244, 134);
+    border:0;
+    outline:none;
+    cursor:pointer;
+    font-size: small;
+    font-weight: 10px;
+    border-radius: 10px;
+}
+
+.popup{
+    width:400px;
+    background:white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#333;
+    visibility: hidden;
+    transition:transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top:100%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup button{
+    width: 100%;
+    padding:10px 0;
+    background:green;
+    color:black;
+    border:0;
+    outline:none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor:pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+
+
+.cssiframe{
+    align-items: center;
+    padding-left: 5%;
+}
+
+/*Start botones y popup de la pagina canchas.html*/
 
 .canchas{
     display:flex;
@@ -133,7 +200,7 @@
     flex-flow:wrap;
     flex:1 1 auto;
     /*padding: auto;*/
-    max-resolution:;
+   
 
 }
 
@@ -174,7 +241,7 @@ max-height: 100%;}*/
 
 /*.clases_title{
 grid-area: miArea;
-/*border: 1px solid black;*/}*/
+/*border: 1px solid black;*/
 
 .clases_kids{
     grid-area: miArea1;

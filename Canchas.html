@@ -11,6 +11,7 @@
     <script src="js/script.js"></script>
     <link rel="icon" href="img/tennis_logo2.ico">
     <link rel="stylesheet" href="css/tennisflex.css">
+
     <title>FULL TENIS - Canchas</title>
 </head>
 <body>
@@ -37,21 +38,24 @@
     
 
 
-    <div class="canchas1">
+    <div  id="fotocanchas" class="canchas1">
        <div><img src="img/polvo1.jpg" alt="logo" class="imgcanchas"></div>
        <div><img src="img/polvo2.jpg" alt="logo" class="imgcanchas"></div>
         <div><img src="img/rapida1.jpg" alt="logo" class="imgcanchas"></div>
     </div>
 
 
-    <main class="contenedorcanchas dos-columnas">
-        <article class="canchas_cuerpo">
-            <h1 class="centertitle">Reservá Cancha Online</h1>
+    <main class="dos-columnas">
+        <article    class="canchas_cuerpo">
+            <br>
+            <br>
+            <h1 id="titreserva" class="centertitle">Reservá Cancha Online</h1>
             <br>
             <div class="container">
                 <div class="row">
                     <div style="text-align:center;">
-                        <form name = "myForm" onsubmit="return(validate())">
+                       <!-- <form name = "myForm" onsubmit="required()">-->
+                           <form novalidate name="myform" id="formu" >
                                 <fieldset class="fieldsetcanchas">
                                     <div>
                                         <br><br><br><br><br>
@@ -104,37 +108,48 @@
                                         
                                         <div>
                                             <label for="date">FECHA</label>
-                                            <input class="textinput" type="date" value="DD/MM/AAAA..." id="date" >
+                                            <input class="textinput" type="date" value="DD/MM/AAAA..." id="date" name="date" >
                                             <label for="times">Horario Comienzo:</label>
-                                            <input class="textinput" type="time" id="times">
+                                            <input class="textinput" type="time" id="times" name="times">
                                             <label for="timef">Horario Fin:</label>
-                                            <input class="textinput" type="time" id="timef" >
+                                            <input class="textinput" type="time" id="timef" name="timef">
                                         </div>
                                     </div>
                                     <br><br><br><br><br>
-            
+                        
+
                                     
-                                    <div class="button">
-                                        <div> <button class="reset" type="reset">Reset</button></div>
-                                    
-                                         <div><input  class="enviarreservas" type="submit" value="Enviar"> </div>
-                                    </div>
                                 </fieldset>
                             </form>
-                        
-                    </div>
-                </div>
+
+                
+                            </div>
+                            <div class="button">
+                                <button id="benviar" type="submit" class="btn" onclick="required()">ENVIAR</button>
+                                <div class="popup" id="popup">
+                                    <img src="img/check.png" alt="">
+                                    <h2>¡¡Reservada!!</h2>
+                                    <br>
+                                    <p>Hemos enviado un mail con el detalle de la reserva.</p>
+                                    <br>
+                                    <button type="button" onclick="closepopup()">OK</button>
+                                </div>
+                           </div>
+            <script src="js/onclick.js"></script>
+
             </div>
-        
-       
+            </div>
+                   
         </article>
-        <article class="canchas_cuerpo">
-          
+
+        <article id="mapacanchas" class="canchas_cuerpo">
+          <br><br>
           <div class="canchasAlq">
           <h1 class="centertitle">¿Donde Estamos?</h1>
                 <br>
+                <div class="cssiframe">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.0214777881797!2d-58.50067508539588!3d-34.55301158047268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6e5b3eef73d%3A0xd3c3514dbd8403ef!2sPARQUE%20SARMIENTO!5e0!3m2!1ses!2sar!4v1664360825004!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-               
+               </div>
         </article>
     </main>
 
