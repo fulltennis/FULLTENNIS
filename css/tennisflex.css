@@ -5,19 +5,12 @@
     font-family: 'Crimson Text', serif;
 }
 
-/*body{opacity: .5;}*/
-
-.fontlinks{
-    text-decoration: none;
-    color: green;
-    font-family: 'Crimson Text', serif;
-}
 
 #contactUsH3{
     text-align: center;
 }
 
-/*start navigation bar*/
+/*START NAVIGATION BAR*/
     .contenedor1{
     background-color: white;
     display:flex;
@@ -27,6 +20,11 @@
     flex:1 1 auto;
     }
 
+    .fontlinks{
+        text-decoration: none;
+        color: green;
+        font-family: 'Crimson Text', serif;
+    }
 
     .hijo1{
         display:flex;
@@ -41,9 +39,9 @@
         height: 100px;
         order:0;
     }
-/*end navigation bar*/
+/*END NAVIGATION BAR*/
 
-/*start hover effect navigation bar*/
+/*START hover effect navigation bar*/
 
     nav a:hover
     {color:#000;
@@ -63,9 +61,9 @@
 
     nav a:hover::before{width:5%;}
 
-/*end hover effert navigation bar*/
+/*END hover effert navigation bar*/
 
-/*Start Contenedor message header*/
+/*START Contenedor message header*/
     .contenedor2{
         background-color: lightblue;
         display:flex;
@@ -76,8 +74,6 @@
         /*flex:1 1 auto;*/
         padding-top: 20px;
         padding-bottom: 20px;
-       
- 
     }
 
     /*alienar parrafo*/
@@ -85,247 +81,166 @@
         text-align: center;
     }
 
-/*End Contenedor message header*/
+/*END Contenedor message header*/
 
 
 
-    .left{
-        display:flex;
-        align-items: left;
-        width: 100px; 
-        flex-grow: 1;
-    }
+/* START PAGINA CANCHAS.HTML*/
+        /*start grid para colocar las imagenes en la pagina Canchas.html*/
+        .canchas1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:'miArea miArea1 miArea2';
+            max-width: 100%; height: auto;
+            margin-left: 0.6%;
+            margin-right: 0.6%;
+        }
 
-    .right{
-        display:flex;
-        align-items: right;
-        width: 100px; 
-        flex-grow: 1;
-    }
+        .canchas2{
+            display: grid;
+            grid-template-columns: 1fr
+            
+        }
 
-    
-/*Fieldset pagina reservar de canchas*/
-.fieldsetcanchas{text-align:left;
-    border: white;
-    display: inline-block;
-    margin: auto;
-    font-size: large;}
+        .imgcanchas{
+            max-width: 100%; 
+            object-fit:cover;
+            padding-top: 10px;
+        }
+        /*fin grid para colocar las imagenes en la pagina Canchas.html*/
+
+
+
+        /*Fieldset pagina reservar de canchas*/
+        .fieldsetcanchas{text-align:left;
+            border: white;
+            display: inline-block;
+            margin: auto;
+            font-size: large;}
+
+        /*Start botones y popup de la pagina canchas.html*/
+        .button{display: flex;justify-content: center;margin: 5%;}
+
+        .btn{
+            padding:5px 20px;
+            margin-bottom: 5%;
+            margin-right: 5%;
+            background-color:rgb(134, 244, 134);
+            border:0;
+            outline:none;
+            cursor:pointer;
+            font-size: small;
+            font-weight: 10px;
+            border-radius: 10px;
+        }
+
+        .popup{
+            width:400px;
+            background:white;
+            border-radius: 6px;
+            position: absolute;
+            top: 0%;
+            left:50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color:#333;
+            visibility: hidden;
+            transition:transform 0.4s, top 0.4s;
+        }
+
+        .open-popup{
+            visibility: visible;
+            top:100%;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+        .popup button{
+            width: 100%;
+            padding:10px 0;
+            background:green;
+            color:black;
+            border:0;
+            outline:none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor:pointer;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+        }
+
+        .cssiframe{
+            align-items: center;
+            padding-left: 5%;
+        }
+
+        /*END botones y popup de la pagina canchas.html*/
+
+        /*se usa en canchas.html, en footer y en eventos */
+        .brcancha{
+            content: "";
+            margin: 2em;
+            display: block;
+            font-size: 10%;
+        }
+/* END PAGINA CANCHAS.HTML*/
+
+
+/*START PAGINA CLASES.HTML*/
+
+        .img { max-width: 100%; 
+            max-height: 100%;
+            object-fit:cover;
+            }
+
+
+        /*se usa en clases.html*/
+        .text_inic2{
+            text-align: left;
+            margin: 2%;
+        }
+
+        /*se usa en clases.html y en canchas.html*/
+        .centertitle{
+            text-align: center;
+        }
+
+        .contenedor22{
+            width: 100%;
+           /* margin-left: 2%;
+            margin-right:2%;*/
+            height: auto;
+            display:block;
+            padding: 50px 50px;
+        }
+        
+        .entrada-blog{
+            display: inline-block;
+            color: black;
+            padding: 10px 20px;
+            border: 10px double lightblue;
+            margin:1%;
+            transition: transform .2s;
+        }
+        
+        .entrada-blog:hover{
+            transform: scale(1.05);
+        }
+
+/* END PAGINA CLASES.HTML*/
+
 
 /*Start Características botón  enviar de la parte de eventos y newsletter*/
 
-.enviar{background-color:rgb(134, 244, 134);border-radius:10px;
-    border:0;
-    outline:none;
-    cursor:pointer;
-    font-size: small;
-    font-weight: 10px;
-    padding:5px 20px;
-}
+        .enviar{background-color:rgb(134, 244, 134);border-radius:10px;
+            border:0;
+            outline:none;
+            cursor:pointer;
+            font-size: small;
+            font-weight: 10px;
+            padding:5px 20px;
+        }
 /*End Características botón  enviar de la parte de eventos y newsletter*/
-
-/*Start botones y popup de la pagina canchas.html*/
-.button{display: flex;justify-content: center;margin: 5%;}
-
-.btn{
-    padding:5px 20px;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    background-color:rgb(134, 244, 134);
-    border:0;
-    outline:none;
-    cursor:pointer;
-    font-size: small;
-    font-weight: 10px;
-    border-radius: 10px;
-}
-
-.popup{
-    width:400px;
-    background:white;
-    border-radius: 6px;
-    position: absolute;
-    top: 0%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color:#333;
-    visibility: hidden;
-    transition:transform 0.4s, top 0.4s;
-}
-
-.open-popup{
-    visibility: visible;
-    top:100%;
-    transform: translate(-50%,-50%) scale(1);
-}
-
-.popup button{
-    width: 100%;
-    padding:10px 0;
-    background:green;
-    color:black;
-    border:0;
-    outline:none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor:pointer;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-}
-
-
-
-.cssiframe{
-    align-items: center;
-    padding-left: 5%;
-}
-
-/*Start botones y popup de la pagina canchas.html*/
-
-.canchas{
-    display:flex;
-    width:80%;
-    height: 500px;
-    margin:50px auto;
-    flex-wrap: wrap;
-    align-items: center; /*funciona con un solo row, y este alinea en el medio horiz y verti del div*/
-    /*stretch*/
-}
-
-.contenedor_clases{
-    background-color: lightblue;
-    display:flex;
-    height:100px;
-    justify-content: space-around;
-    flex-flow:wrap;
-    flex:1 1 auto;
-    /*padding: auto;*/
-   
-
-}
-
-/*grid de la pagina clases*/
-.types{
-  width:100%;
-  display: grid;
-  grid-template-rows: 0.2fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:/*'miArea miArea'*/
-                        'miArea1 miArea3'
-                        'miArea2 miArea4';                    
-
-   grid-column-gap: 20px;
-   grid-row-gap:0px;
-   padding: 0 10px 0 10px;
-  /* background-color:orange;*/
-   border: 10px double lightblue;
-}
-
-.img { max-width: 100%; 
-    max-height: 100%;
-    object-fit:cover;
-     }
-
-
-/*.img{
-object-fit: cover;
-max-width: 100%;
-max-height: 100%;}*/
-
-.types>div{
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 0px 0;
-    font-size: 30px;
-}
-
-/*.clases_title{
-grid-area: miArea;
-/*border: 1px solid black;*/
-
-.clases_kids{
-    grid-area: miArea1;
-    /*border: 1px solid black;*/
-
-    max-width: 100%; height: auto;
-    padding:0%;
-    
-    
- }
-
-.text_kids
-{
-    grid-area: miArea2;
-    border: 10px double lightblue;
-    
-    }
-
-.text_inic{
-    font-size:0.5em;
-    text-align: left;
-    margin: 2%;
-}
-
-.text_inic2{
-
-    text-align: left;
-    margin: 2%;
-}
-
-.centertitle{
-    text-align: center;
-}
-
-.clases_adults{
-        grid-area: miArea3;
-        max-width: 100%; height: auto;
-        /*border: 1px solid black;*/}
-        
-.text_adults
-        {
-            grid-area: miArea4;
-            border: 10px double lightblue;}
-
-br{
-    content: "";
-    margin: 2em;
-    display: block;
-    font-size: 10%;
-}
-/*start grid para colocar las imagenes en la pagina Canchas.html*/
-.canchas1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:'miArea miArea1 miArea2';
-    max-width: 100%; height: auto;
-    margin-left: 0.6%;
-    margin-right: 0.6%;
-   }
-
-   .canchas2{
-    display: grid;
-    grid-template-columns: 1fr
-    
-   }
-
-.imgcanchas{
-    max-width: 100%; 
-    object-fit:cover;
-    padding-top: 10px;
-}
-/*fin grid para colocar las imagenes en la pagina Canchas.html*/
-
-
-
-.otro{align-self: flex-start;
-
-}
-
-.otro2{align-self:flex-end;
-
-}
-
 
 /* Start Slideshow container */
     .slideshow-container {
@@ -369,150 +284,57 @@ br{
 /* End Slideshow container */
 
 
-.contenedor {
-    /*max-width: 1200px;*/
-    width: 100%;
-    margin: auto auto;
-    border:1px solid red;
-    height: 300px;
-    display:block;
-}
 
-.contenedor22{
-    width: 100%;
-   /* margin-left: 2%;
-    margin-right:2%;*/
-    height: auto;
-    display:block;
-    padding: 50px 50px;
-}
+/*START PAGINA EVENTO.HTML*/
 
-.entrada-blog{
-    display: inline-block;
-    color: black;
-    padding: 10px 20px;
-    border: 10px double lightblue;
-    margin:1%;
-    transition: transform .2s;
-}
-
-.entrada-blog:hover{
-    transform: scale(1.05);
-}
-
-/*START Main Contact*/
- /*   .contenedorMain {
-        width: 100%;
-        height: auto;
-    }*/
-
-    .contmain{
-        width: 100%;
-        /*background-color: yellow;*/
-        flex-flow:wrap;
-        height: auto;
-        text-align: center;
-        /*padding: 10px 20px;*/
-        border: 10px double lightblue;
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-    }
-
-
-    .mainblock{
-        display: inline-block;
-        padding: 10%;
-        font-weight: bold;
-        /*background-color: red;*/
-        justify-content:center;
-        
-    }
-
-    .mainblockcal{
-        display: inline-block;
-        padding: 10%;
-        font-weight: bold;
-       /* background-color: red;*/
-        justify-content:center;
-        max-width: 50%;
-        margin-left: 20%;
-        
-    }
-    .articuloMain {
-        /*display: flex;
-        color: black;
-        padding: 10px 20px;
-        border: 10px double lightblue;
-       
-        justify-content: space-between;*/
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 2rem;
-        border: 10px double lightblue;
-        margin:1%;
-
-    }
-
-    .imgdate{
-        max-width:100%;
-    }
-
-    .pruebanov{   
-    display: inline-block;
-    color: black;
-    padding: 10px 20px;
-   /*border: 10px double red;*/
-    margin:1%;
-    text-align: center; 
-    width: 100%;
-    flex-wrap: nowrap;} 
-
-    .imgnov{   
-        display: inline-block;
-        color: black;
-        padding: 10px 20px;
-       /*border: 10px double red;*/
-        width: 100%;
-        text-align: center;
-        margin:1%;
-    } 
-        
-    .textoNovedades{
-  
-       /* border:2px double greenyellow;*/
-        text-align: center;
-        align-items: center;
-        margin: 10%;
-        flex-flow: wrap;
-        
-;
+        .contmain{
+            width: 100%;
+            /*background-color: yellow;*/
+            flex-flow:wrap;
+            height: auto;
+            text-align: center;
+            /*padding: 10px 20px;*/
+            border: 10px double lightblue;
+            margin-top: 0.5%;
+            margin-bottom: 0.5%;
         }
 
-    .anotarseactividad{
-        display: inline-block;
-        padding: 10px 10px;
-        font-weight: bold;
-        margin:10%;
-        justify-content: space-evenly;
-    }
+
+        .mainblock{
+            display: inline-block;
+            padding: 10%;
+            font-weight: bold;
+            /*background-color: red;*/
+            justify-content:center;
+            
+        }
+
+        .mainblockcal{
+            display: inline-block;
+            padding: 10%;
+            font-weight: bold;
+        /* background-color: red;*/
+            justify-content:center;
+            max-width: 50%;
+            margin-left: 20%;
+            
+        }
+
+        .imgdate{
+            max-width:100%;
+        }
+
+        .confirmar{
+            background-color: white;
+            border:white ;
+            display: inline-block;
+            
+        }
 
 
-    .confirmar{
-        background-color: white;
-        border:white ;
-        display: inline-block;
-        
-    }
+/*END PAGINA EVENTOS.HTML*/
 
-
-/*END MAIN CONTACT*/
-
-
-
-
-
-
-/*Start Footer*/
+/*START FOOTER*/
         .contfoot{
             width: 100%;
             background-color: lightblue;
@@ -554,7 +376,7 @@ br{
             margin-right: 1%;
         }
   
-/*End Footer*/
+/*END FOOTER*/
 
 /*Start Medias Queries*/
 @media screen and (min-width: 623px) 
