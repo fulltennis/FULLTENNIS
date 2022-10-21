@@ -1,0 +1,114 @@
+'use strict';
+
+
+
+/**
+ * add event on element
+ */
+
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
+  }
+}
+
+
+
+/**
+ * navbar toggle
+ */
+
+const navbar = document.querySelector("[data-navbar]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const overlay = document.querySelector("[data-overlay]");
+
+const toggleNavbar = function () {
+  navbar.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+addEventOnElem(navTogglers, "click", toggleNavbar);
+
+const closeNavbar = function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+addEventOnElem(navLinks, "click", closeNavbar);
+
+
+
+/**
+ * header active
+ */
+
+const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
+});
+
+
+
+/**
+ * scroll reveal effect
+ */
+
+const sections = document.querySelectorAll("[data-section]");
+
+const reveal = function () {
+  for (let i = 0; i < sections.length; i++) {
+
+    if (sections[i].getBoundingClientRect().top < window.innerHeight / 2) {
+      sections[i].classList.add("active");
+    }
+
+  }
+}
+
+reveal();
+addEventOnElem(window, "scroll", reveal);
+
+
+/*SLIDE IMAGE*/
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("Slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+} 
+
+
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=-34.603722&lon=-58.381592&units=metric&appid=466f65ce2951d0514f544cbeea31391d",
+function(data){
+ console.log(data);
+  var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon +".png";
+  var temp = Math.floor(data.main.temp);
+  var desc = data.weather[0].main;
+  
+  $('.icon').attr('src',icon);
+  $('.desc').append(desc);
+  $('.temp').append(temp);
+}
+);
+
